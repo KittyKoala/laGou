@@ -1,0 +1,438 @@
+/*
+ * 搜索
+ */
+#lg_search{background: #F2F5F4;}
+#lg_search .container{
+	padding: 30px 0 28px;
+}
+#lg_search .container .search_box{
+	border: 0 solid #00b38a;
+	width: 938px;
+	height: 46px;
+	margin: 0 auto;
+}
+#lg_search .container .search_box form{display: block;}
+#lg_search .container .search_box form #searhInput{
+	width: 762px;
+	height: 20px;
+	line-height: 20px;
+	float: left;
+	font-size: 16px;
+	padding: 12px 16px;
+	margin: 2;
+	border: 1px solid #E8E8E8;
+	border-right: 0;
+}
+#lg_search .container .search_box form #searhInput:focus{
+	border: 1px solid #00b38a;
+	outline: 0;
+	border-right: 0;
+}
+#lg_search .container .search_box form #searchSubmit{
+	width: 142px;
+	height: 46px;
+	font-size: 18px;
+	color: white;
+	background: #00b38a;
+	border: 0;
+}
+#lg_search .container dl.hotSearch{
+	width: 938px;
+	height: 22px;
+	overflow: hidden;
+	margin: 6px auto 0;
+}
+#lg_search .container dl.hotSearch dt{
+	float: left;
+	margin-right: 10px;
+	font-size: 14px;
+	color: #777;
+}
+#lg_search .container dl.hotSearch dd{
+	margin-right: 20px;
+	float: left;
+}
+#lg_search .container dl.hotSearch dd a{color: #00b38a;}
+#lg_search .container dl.hotSearch dd a:hover{
+	border-bottom: 1px solid #00b38a;
+}
+
+/*
+ * 左侧导航、banner
+ */
+#content_search{
+	margin: 26px auto 0;
+}
+#content_search .container{}
+#content_search .container .sidebar{
+	float: left;
+	width: 321px;
+}
+#content_search .container .sidebar .menu{
+	width: 100%;
+	height: 55px;
+	position: relative;
+}
+#content_search .container .sidebar .menu .menu_btn{
+	padding: 18px 0  17px 0;
+}
+#content_search .container .sidebar .menu .menu_btn:hover{
+	border-bottom: 1px solid rgba(0,0,0,.09);
+	border-collapse:collapse;
+}
+#content_search .container .sidebar .menu .menu_btn dl{
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	position: relative;
+}
+#content_search .container .sidebar .menu .menu_btn dl dt{
+	display: inline-block;
+	float: left;
+	font-size: 18px;
+	margin-right: 5px;
+}
+#content_search .container .sidebar .menu .menu_btn dl dd{
+	float: left;
+	padding: 0 6px;
+	margin:2px 3px 0 0;
+}
+#content_search .container .sidebar .menu .menu_btn dl dd a:hover{
+	color: #00B38A;
+}
+#content_search .container .sidebar .menu .menu_btn dl dd.arrow{
+	position: absolute;
+	right: 0;
+	top: 6px;
+	width: 6px;
+	height: 11px;
+	margin: 0;
+	background: url("../images/arrow.png") 0 0 no-repeat;
+}
+#content_search .container .sidebar .menu .menu_second{
+	position: absolute;
+	left: 321px;
+	top: 0;
+	width: 600px;
+	padding: 20px 10px 0 12px;
+	background: white;
+	border: 1px solid rgba(0,0,0,.09);
+	border-radius: 2px;
+	border-top-left-radius:0;
+	z-index: 5;
+}
+#content_search .container .sidebar .menu .menu_second dl{
+	margin: 0 0 17px;
+}
+#content_search .container .sidebar .menu .menu_second dl dt{
+	color: #333;
+	padding: 0 11px;
+	margin-bottom: 6px;
+	font-size: 14px;
+	line-height:20px;
+	overflow: hidden;
+}
+#content_search .container .sidebar .menu .menu_second dl dd{
+	font-size:0;
+	overflow: hidden;
+}
+#content_search .container .sidebar .menu .menu_second dl dd a{
+	display: inline-block;
+	padding:0 11px;
+	font-size: 14px;
+	line-height: 28px;
+	color: #777;
+	margin-left: -1px;
+	white-space:nowrap;
+}
+#content_search .container .sidebar .menu .menu_second dl dd a:hover{
+	color: #00B38A;
+}
+
+#content_search .container .banner{
+	margin-left:360px;
+	padding-top: 20px;
+	height: 346px;
+	position: relative;
+}
+#content_search .container .banner .banner_inner{
+	position: absolute;
+}
+#content_search .container .banner .banner_inner .bannerImg_item{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: .5s;
+}
+#content_search .container .banner .banner_inner .bannerImg_item img{
+	width: 840px;
+	height: 346px;
+}
+#content_search .container .banner .banner_indicator{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	z-index: 2;
+}
+#content_search .container .banner .banner_indicator li{
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	margin-right: 3px;
+	border-radius: 50%;
+	background: white;
+	cursor: pointer;
+	opacity: .5;
+}
+#content_search .container .banner .banner_indicator li.active{
+	opacity: 1;
+}
+#content_search .container .banner a.banner_prev,
+#content_search .container .banner a.banner_next{
+	width: 18px;
+	height: 34px;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+}
+#content_search .container .banner a.banner_prev{
+	left: 20px;
+	background: url("../images/banner_arrow_left.png") no-repeat;
+	background-size: 18px 34px;
+}
+#content_search .container .banner a.banner_next{
+	right: 20px;
+	background: url("../images/banner_arrow_right.png") no-repeat;
+	background-size: 18px 34px;
+}
+/*
+ * 热门
+ */
+.lg_hot{
+	margin-top: 52px;
+}
+.lg_hot .container .hot_top{
+	margin-bottom: 14px;
+	border-bottom: 1px solid #E8E8E8;
+}
+.lg_hot .container .hot_top li{
+	float: left;
+}
+.lg_hot .container .hot_top li a{
+	display: block;
+	padding: 14px 0;
+	margin-right: 58px;
+	font-size: 16px;
+	color: #999;
+}
+.lg_hot .container .hot_top li a.active{
+	color: #333;
+	border-bottom:2px solid #333 ;
+}
+.lg_hot .container .hot_body{
+	width: 1216px;
+}
+.lg_hot .container .hot_body .hot_item{
+	float: left;
+	width: 389px;
+	height: 200px;
+	margin: 16px 16px 0 0;
+	padding: 20px 18px 0;
+	box-sizing: border-box;
+	border: 1px solid #EAEEED;
+	background: #fff;
+}
+.lg_hot .container .hot_body .hot_item:hover,
+.container .hot_company .company_item:hover{
+	box-shadow:0 0 3px 2px rgba(0,0,0,.05);
+}
+.lg_hot .container .hot_body .hot_item .item_top ul.item_top_1{
+	width: 100%;
+	line-height: 22px;
+}
+.lg_hot .container .hot_body .hot_item .item_top ul.item_top_1 li{
+	float: left;
+}
+.lg_hot .container .hot_body .hot_item .item_top ul.item_top_1 li.job{
+	color: #333;
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+}
+.lg_hot .container .hot_body .hot_item .item_top ul.item_top_1 li.job a:hover{
+	color: #00B38A;
+}
+.lg_hot .container .hot_body .hot_item .item_top ul.item_top_1 li.time{
+	color: #999;
+	font-size: 14px;
+	margin: 0 8px;
+}
+.lg_hot .container .hot_body .hot_item .item_top ul.item_top_1 li.linkImg{
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	margin-top: 2px;
+}
+.lg_hot .container .hot_body .hot_item .item_top ul.item_top_1 li.money{
+	float: right;
+	font-size: 16px;
+	color: #fa6041;
+}
+.lg_hot .container .hot_body .hot_item .item_top ul.item_top_2,
+.lg_hot .container .hot_body .hot_item .item_top ul.item_top_3{
+	width:100%;
+	height: 30px;
+	line-height: 30px;
+}
+.lg_hot .container .hot_body .hot_item .item_top ul.item_top_2{
+	color: #777;
+}
+.lg_hot .container .hot_body .hot_item .item_top ul.item_top_2 li{
+	float: left;
+}
+.lg_hot .container .hot_body .hot_item .item_top ul.item_top_2 li.degree:before{
+	content: " /";
+	margin: 0 5px;
+}
+.lg_hot .container .hot_body .hot_item .item_top ul.item_top_3{
+	margin-top: 5px;
+}
+.lg_hot .container .hot_body .hot_item .item_top ul.item_top_3 li{
+	float: left;
+	width: 61px;
+	height: 26px;
+	padding: 0 5px;
+	margin-right: 10px;
+	font-size: 12px;
+	line-height: 26px;
+	color: #999;
+	border: 1px solid #F0F0F0;
+	border-radius: 3px;
+	text-align: center;
+}
+
+.lg_hot .container .hot_body .hot_item .item_bottom{
+	margin-top: 18px;
+	padding-top:18px;
+	border-top: 1px dashed #E0E0E0;
+}
+.lg_hot .container .hot_body .hot_item .item_bottom a img{
+	width: 40px;
+	height: 40px;
+}
+.lg_hot .container .hot_body .hot_item .item_bottom .bottom_right{
+	margin-left: 54px;
+}
+.lg_hot .container .hot_body .hot_item .item_bottom .bottom_right a.company_name{
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+	color: #333;
+}
+.lg_hot .container .hot_body .hot_item .item_bottom .bottom_right a.company_name:hover{
+	color: #00B38A;
+}
+.lg_hot .container .hot_body .hot_item .item_bottom .bottom_right .company_descibe{
+	height: 20px;
+	line-height: 20px;
+	color: #999;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	word-wrap:normal;
+}
+.lg_hot .container .hot_body .hot_item .item_bottom .bottom_right .company_descibe span + span:before{
+	content: " /";
+	margin: 0 5px;
+}
+.lg_hot .container a.lookMore{
+	display: block;
+	width: 387px;
+	height: 42px;
+	line-height: 42px;
+	margin: 16px auto 0;
+	background: #FFF;
+	border: 1px solid #00B38A;
+	font-size: 16px;
+	color: #00b38a;
+	text-align: center;
+	transition: 0.5s;
+}
+.lg_hot .container a.lookMore:hover{
+	background: #00b38a;
+	color: white;
+}
+
+/*
+ * 热门公司
+ */
+.lg_hot_company{margin-bottom: 90px;}
+.container .hot_company{
+	width: 1216px;
+}
+.container .hot_company .company_item{
+	float: left;
+	width: 288px;
+	height: 270px;
+	margin: 16px 16px 0 0;
+	box-sizing: border-box;
+	border: 1px solid #EEE;
+}
+.container .hot_company .company_item .company_top{
+	margin: 0 13px;
+	padding: 20px 0 14px;
+	text-align: center;
+	border-bottom: 1px dashed #E0E0E0;
+}
+.container .hot_company .company_item .company_top p{
+	width: 100%;
+	line-height: 22px;
+}
+.container .hot_company .company_item .company_top p a img{
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+}
+.container .hot_company .company_item .company_top p.company_name{
+	height: 22px;
+	margin-top: 13px;
+	font-size: 16px;
+	color: #333;
+}
+.container .hot_company .company_item .company_top p.company_name a:hover{
+	color: #00B38A;
+}
+.container .hot_company .company_item .company_top p.company_descibe{
+	height: 22px;
+	margin-top: 3px;
+	color: #999;
+}
+.container .hot_company .company_item .company_top p.company_descibe span+span:before{
+	content: "/";
+	margin: 0 3px;
+}
+.container .hot_company .company_item .company_top p.aim{
+	margin-top:5px;
+	color: #555;
+}
+.container .hot_company .company_item .company_bottom a.bottom_item{
+	display: block;
+	margin-top: 17px;
+	text-align: center;
+}
+.container .hot_company .company_item .company_bottom a.bottom_item_1{
+	width: 90px;
+}
+.container .hot_company .company_item .company_bottom a.bottom_item_2{
+	width: 105px;
+}
+.container .hot_company .company_item .company_bottom a.bottom_item p.num{
+	color: #00B38A;
+}
+.container .hot_company .company_item .company_bottom a.bottom_item p.gray{
+	margin-top: 4px;
+	font-size: 12px;
+	color: #999;
+}

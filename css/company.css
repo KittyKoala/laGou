@@ -1,0 +1,251 @@
+#company_banner{
+	width: 100%;
+	height: 389px;
+	background: #00b38b;
+}
+#company_banner h3{
+	font-size: 30px;
+	color: #fff;
+	text-shadow: 0 3px 9px rgba(0,0,0,.25);
+	height: 42px;
+	padding: 25px 0 20px;
+	text-align: center;
+}
+#company_banner .banner_content{
+	width: 1124px;
+	padding: 0 30px;
+	margin: 0 auto;
+	position: relative;
+}
+#company_banner .banner_content a.prev,
+#company_banner .banner_content a.next{
+	display: block;
+	cursor: pointer;
+	width: 46px;
+	height: 240px;
+	text-indent: -2000px;
+	background:url("../images/prevNext.png") no-repeat;
+	position: absolute;
+	top: 0;
+	opacity:0.2;
+}
+#company_banner .banner_content a.prev{
+	left: -46px;
+	background-position: left center;
+}
+#company_banner .banner_content a.next{
+	right: -46px;
+	background-position: right center;
+}
+
+#company_banner .banner_content .content_inner{
+	width: 100%;
+	overflow: hidden;
+	height: 300px;
+}
+#company_banner .banner_content .content_inner ul.panel_list{
+	position: relative;
+}
+#company_banner .banner_content .content_inner ul.panel_list li{
+	width: 160px;
+	height: 220px;
+	float: left;
+	position: relative;
+	margin: 10px 0 10px 54px;
+}
+#company_banner .banner_content .content_inner ul.panel_list li .panel{
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 142px;
+	height: 202px;
+	background: white;
+	background: rgba(255,255,255,.8);
+	padding: 9px;
+}
+#company_banner .banner_content .content_inner ul.panel_list li .panel img{
+	display: block;
+	width: 142px;
+	height: 142px;
+}
+#company_banner .banner_content .content_inner ul.panel_list li .panel p.panel_text{
+	text-align: center;
+	padding: 0 3px;
+	margin-top: 13px;
+	line-height: 22px;
+}
+#company_banner .banner_content .content_inner ul.panel_list li .panel .panel_cont{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 160px;
+	height: 220px;
+}
+#company_banner .banner_content .content_inner ul.panel_list li .panel .panel_cont .panel_det{
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -90px;
+	margin-top: -120px;
+	width: 126px;
+	height: 186px;
+	padding: 26px;
+	border: 1px solid #03fe56;
+	background: #fff;
+	color: #444;
+	opacity: 0;
+}
+#company_banner .banner_content .content_inner ul.panel_list li .panel .panel_cont .panel_det p{
+	line-height: 22px;
+}
+#company_banner .banner_content .content_inner ul.panel_list li .panel .panel_cont .panel_det div a{
+	display: block;
+	text-align: center;
+	border-radius: 1px;
+	width: 128px;
+	height: 40px;
+	line-height: 40px;
+	background: #00b38a;
+	color: white;
+	font-size: 15px;
+	position: absolute;
+	bottom: 25px;
+}
+
+#company_banner .banner_content .content_inner ul.panel_list li .time{
+	position: absolute;
+	left: 0;
+	bottom: -50px;
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+}
+#company_banner .banner_content .content_inner ul.panel_list li .time span.time_bg{
+	display: block;
+	position: absolute;
+	left: 126px;
+	top: 6px;
+	width: 120px;
+	height: 11px;
+	background: url("../images/bannerTime.png") no-repeat;
+}
+#company_banner .banner_content .content_inner ul.panel_list li .time span.first{
+	width: 106px;
+	background-position: -14px 0;
+	left: -75px;
+}
+
+/*
+ * 筛选
+ */
+#positionHead{
+	margin-bottom: 20px;
+}
+#positionHead .filterBox{
+	margin-top:35px;
+	padding: 8px 0;
+	background: #fafafa;
+	border: 1px solid #ededed;
+	min-height: 36px;
+}
+#positionHead .filterBox .filterBox_1{
+	position: relative;
+}
+#positionHead .filterBox .filterBox_1 span.title,
+#positionHead .sub_filter .order span.title{
+	display: block;
+	float: left;
+	height: 14px;
+	line-height: 14px;
+	font-weight: 600;
+	margin:0 5px 0 15px;
+	padding: 4px 8px;
+}
+#positionHead .filterBox .filterBox_1 .city_wrapper{
+	display: inline-block;
+	width: 1038px;
+	height: 22px;
+	overflow: hidden;
+	position: absolute;
+}
+#positionHead .filterBox .filterBox_1 .city_wrapper a,
+#positionHead .sub_filter .order a{
+	display: block;
+	padding: 4px 8px;
+	cursor: pointer;
+	float: left;
+	margin-left: 5px;
+	height: 14px;
+	line-height: 14px;
+}
+#positionHead .filterBox .filterBox_1 .city_wrapper a:hover,
+#positionHead .filterBox .filterBox_1 .city_wrapper a.active,
+#positionHead .sub_filter .order a:hover,
+#positionHead .sub_filter .order a.active{
+	color: white;
+	background: #00b38a;
+}
+#positionHead .filterBox .filterBox_1 .moreCity{
+	color: #555;
+	font-weight: 400;
+	float: right;
+	margin: 0 16px;
+}
+#positionHead .filterBox .filterBox_1 + .filterBox_1{
+	margin-top: 10px;
+}
+
+#positionHead .sub_filter{
+	position: relative;
+	margin-top: 13px;
+	background: #fafafa;
+	border: 1px solid #ededed;
+}
+#positionHead .sub_filter .order{
+	margin-right: 35px;
+	padding-left: 16px;
+	float: left;
+	padding: 10px 0;
+	height: 23px;
+	line-height: 23px;
+}
+#positionHead .sub_filter .appraisal{
+	width: 114px;
+	margin-right: 18px;
+	text-align: right;
+	cursor: pointer;
+	padding: 10px 0;
+	height: 23px;
+	line-height: 23px;
+}
+#positionHead .sub_filter .appraisal span input[type=checkbox]{
+	display: inline-block;
+	width: 18px;
+	height: 15px;
+	background: white;
+	vertical-align: middle;
+}
+
+#pager{
+	margin: 35px 0;
+	text-align: center;
+}
+#pager ul li{
+	display: inline-block;
+	margin: 0 5px;
+	font-size: 14px;
+	border: 1px solid #ededed;
+	color: #555;
+	height: 21px;
+	line-height: 21px;
+	padding: 3px 10px;
+	cursor: pointer;
+}
+#pager ul.container li.active,
+#pager ul.container li:hover{
+	color: white;
+	background: #00b38a;
+}
